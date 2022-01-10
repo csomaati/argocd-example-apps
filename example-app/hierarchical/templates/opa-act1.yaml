@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: hierarchical-opa-act1
     name: act1
-  project: hierarchycal-opa
+  project: hierarchical-opa
   source:
     repoURL: https://github.com/csomaati/argocd-example-apps.git
     path: example-app/config/opa-act1
