@@ -13,3 +13,6 @@ spec:
   source:
     repoURL: https://github.com/csomaati/argocd-example-apps.git
     path: example-app/config/opa-prod
+  syncPolicy:
+    syncOptions:     # Sync options which modifies sync behavior
+    - CreateNamespace=true
