@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: opa-dev
+  name: opa-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opa-dev
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: opa-dev
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        resources: {}
+status: {}

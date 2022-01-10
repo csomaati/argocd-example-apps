@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: single-opa-dev
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: single-opa-dev
+    name: dev
+  project: single-opa
+  source:
+    repoURL: https://github.com/csomaati/argocd-example-apps.git
+    path: example-app/config/opa-dev

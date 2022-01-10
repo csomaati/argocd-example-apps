@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hierarchical-opa-prod
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: hierarchical-opa-prod
+    name: prod
+  project: hierarchycal-opa
+  source:
+    repoURL: https://github.com/csomaati/argocd-example-apps.git
+    path: example-app/config/opa-prod
